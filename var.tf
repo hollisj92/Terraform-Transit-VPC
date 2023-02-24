@@ -26,6 +26,26 @@ variable "public_ip" {
     sensitive = true
 }
 
+variable "library_gateway_ip" {
+    description = "Library gateway - Public IP"
+    type = string
+    sensitive = true
+}
+
+variable "gov_gateway_ip" {
+    description = "Government gateway - Public IP"
+    type = string
+    sensitive = true
+}
+
+variable "highschool_gateway_ip" {
+    description = "Highschool gateway - Public IP"
+    type = string
+    sensitive = true
+}
+
+
+
 #Tags
 
 variable "env_prefix" {
@@ -71,3 +91,6 @@ variable "ec2_eip_cidr" {
   type        = string
   sensitive   = true
 }
+
+# regional variables 
+

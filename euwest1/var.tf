@@ -26,6 +26,8 @@ variable "public_ip" {
     sensitive = true
 }
 
+
+
 #Tags
 
 variable "env_prefix" {

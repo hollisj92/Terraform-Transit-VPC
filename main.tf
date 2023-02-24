@@ -1,9 +1,3 @@
-provider "aws" {
-  region = "us-east-1"
-  access_key = var.access_key
-  secret_key = var.secret_key
-}
-
 module "eueast1" {
   source          = "./eueast1"
   region          = var.region
@@ -12,11 +6,11 @@ module "eueast1" {
   env_prefix      = var.env_prefix
   team            = var.team
   proj_prefix     = var.proj_prefix
-  dx_gateway_1    = var.dx_gateway_1
-  dx_gateway_2    = var.dx_gateway_2
-  location_code_1 = var.location_code_1
-  location_code_2 = var.location_code_2
-  side_asn        = var.side_asn
+  ami             = var.ami
+  bastion_priv_ip = var.bastion_priv_ip
+  keyname         = var.keyname
+  public_ip       = var.public_ip
+  ec2_eip_cidr    = var.ec2_eip_cidr
 }
 
 module "euwest1" {
@@ -27,11 +21,11 @@ module "euwest1" {
   env_prefix      = var.env_prefix
   team            = var.team
   proj_prefix     = var.proj_prefix
-  dx_gateway_1    = var.dx_gateway_1
-  dx_gateway_2    = var.dx_gateway_2
-  location_code_1 = var.location_code_1
-  location_code_2 = var.location_code_2
-  side_asn        = var.side_asn
+  public_ip       = var.public_ip
+  bastion_priv_ip = var.bastion_priv_ip
+  keyname         = var.keyname
+  ec2_eip_cidr    = var.ec2_eip_cidr
+  ami             = var.ami
 }
 
 module "useast1" {
@@ -42,11 +36,11 @@ module "useast1" {
   env_prefix      = var.env_prefix
   team            = var.team
   proj_prefix     = var.proj_prefix
-  dx_gateway_1    = var.dx_gateway_1
-  dx_gateway_2    = var.dx_gateway_2
-  location_code_1 = var.location_code_1
-  location_code_2 = var.location_code_2
-  side_asn        = var.side_asn
+  bastion_priv_ip = var.bastion_priv_ip
+  ami             = var.ami
+  keyname         = var.keyname
+  ec2_eip_cidr    = var.ec2_eip_cidr
+  public_ip       = var.public_ip
 }
 
 module "uswest1" {
@@ -57,9 +51,9 @@ module "uswest1" {
   env_prefix      = var.env_prefix
   team            = var.team
   proj_prefix     = var.proj_prefix
-  dx_gateway_1    = var.dx_gateway_1
-  dx_gateway_2    = var.dx_gateway_2
-  location_code_1 = var.location_code_1
-  location_code_2 = var.location_code_2
-  side_asn        = var.side_asn
+  ec2_eip_cidr    = var.ec2_eip_cidr
+  keyname         = var.keyname
+  public_ip       = var.public_ip
+  ami             = var.ami
+  bastion_priv_ip = var.bastion_priv_ip
 }

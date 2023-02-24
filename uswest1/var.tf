@@ -18,6 +18,9 @@ variable "secret_key" {
   sensitive   = true
 }
 
+
+
+
 #customer site resources
 
 variable "public_ip" {
